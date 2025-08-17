@@ -1,0 +1,49 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Health Tracker</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Welcome, <span id="user-name"></span> 👋</h2>
+    <button onclick="logout()">Logout</button>
+
+    <div class="charts-grid">
+      <div class="chart-box">
+        <h3>Steps (Last 7 Days)</h3>
+        <canvas id="stepsChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Water Intake (Liters)</h3>
+        <canvas id="waterChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Sleep Duration (Hours)</h3>
+        <canvas id="sleepChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Mood Overview</h3>
+        <canvas id="moodChart"></canvas>
+      </div>
+    </div>
+
+    <br>
+    <a href="add.html"><button>➕ Add Today's Data</button></a>
+    
+    <a href="history.html"><button>📅 View Weekly History</button></a>
+
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

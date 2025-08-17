@@ -1,0 +1,70 @@
+<!-- history.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly History - Health Tracker</title>
+  <link rel="stylesheet" href="history.css" />
+  
+</head>
+<body>
+
+  <h1>📅 Weekly Health History</h1>
+  <div id="history-container"></div>
+
+  <div style="text-align: center;">
+    <a href="dashboard.html"><button>⬅ Back to Dashboard</button></a>
+  </div>
+  <script>
+  const currentUser = localStorage.getItem("loggedInUser");
+  if (!currentUser) {
+    alert("No user found!");
+    location.href = "index.html";
+  }
+
+  const historyContainer = document.getElementById('history-container');
+  const history = JSON.parse(localStorage.getItem(`${currentUser}_weeklyHistory`)) || [];
+
+
+    if (history.length === 0) {
+      historyContainer.innerHTML = "<p style='text-align:center;'>No history found. Start adding data!</p>";
+    } else {
+      history.forEach((week, index) => {
+        const weekDiv = document.createElement('div');
+        weekDiv.className = "week-section";
+
+        const title = document.createElement('h3');
+        title.textContent = `Week ${index + 1}`;
+        weekDiv.appendChild(title);
+
+        const table = document.createElement('table');
+        table.innerHTML = `
+          <tr>
+            <th>Date</th>
+            <th>Steps</th>
+            <th>Water (L)</th>
+            <th>Sleep (hrs)</th>
+            <th>Mood</th>
+          </tr>
+        `;
+
+        week.forEach(day => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${day.date}</td>
+            <td>${day.steps}</td>
+            <td>${day.water}</td>
+            <td>${day.sleep}</td>
+            <td>${day.mood}</td>
+          `;
+          table.appendChild(row);
+        });
+
+        weekDiv.appendChild(table);
+        historyContainer.appendChild(weekDiv);
+      });
+    }
+  </script>
+
+</body>
+</html>
