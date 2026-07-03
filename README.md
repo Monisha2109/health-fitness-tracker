@@ -65,28 +65,6 @@ To help users monitor their daily health habits through an interactive web appli
 
 ---
 
-## 📂 Project Structure
-
-```
-Health-Fitness-Tracker/
-│
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── screenshots/
-│
-├── index.html
-├── login.html
-├── register.html
-├── dashboard.html
-├── add.html
-├── weekly-history.html
-└── README.md
-```
-
----
-
 ## ⚙️ Installation
 
 1. Clone the repository
@@ -143,25 +121,25 @@ This allows users to access their information even after refreshing the browser.
 
 ### 📊 Dashboard
 
-![Dashboard](assets/screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
 ### ➕ Add Today's Health Data
 
-![Add Health Data](assets/screenshots/add-health-data.png)
+![Add Health Data](screenshots/add-health-data.png)
 
 ---
 
 ### 📅 Weekly Health History
 
-![Weekly History](assets/screenshots/weekly-history.png)
+![Weekly History](screenshots/weekly-history.png)
 
 ---
 
 ### 📈 Analytics Dashboard
 
-![Analytics](assets/screenshots/analytics.png)
+![Analytics](screenshots/analytics.png)
 
 ---
 
@@ -221,10 +199,6 @@ Through this project, I gained practical experience in:
 ## 👩‍💻 Author
 
 **Monisha H**
-
-Computer Science and Engineering Student
-
-GitHub: https://github.com/Monisha2109
 
 ---
 
